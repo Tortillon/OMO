@@ -23,8 +23,7 @@ public class Name : MonoBehaviour
 
     public void OnButtonClick(TMP_InputField Input)
     {
-        if (Input.text.Length <= 8) StartCoroutine(LoadLevel());
-        else Hello.text = "YOUR NAME SHOULD HAVE LESS THAN 8 LETTERS.";
+         StartCoroutine(LoadLevel());
     }
 
     private IEnumerator LoadLevel()
