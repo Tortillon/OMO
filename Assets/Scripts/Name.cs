@@ -19,6 +19,10 @@ public class Name : MonoBehaviour
     void Start()
     {
         Hello.text = "THIS IS YOUR OMO! CHOOSSE A HAT AND A NAME.";
+        
+        Input.onValidateInput +=
+            delegate (string s, int i, char c) { return char.ToUpper(c); };
+    
     }
 
     public void OnButtonClick(TMP_InputField Input)
