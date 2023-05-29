@@ -15,6 +15,7 @@ public class Name : MonoBehaviour
 {
     public TextMeshProUGUI Hello;
     public TMP_InputField Input;
+    public static string PlayerName;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class Name : MonoBehaviour
     public void OnButtonClick(TMP_InputField Input)
     {
          StartCoroutine(LoadLevel());
+        PlayerName = Input.text;
     }
 
     private IEnumerator LoadLevel()
