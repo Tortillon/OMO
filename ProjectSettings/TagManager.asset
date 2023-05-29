@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hat
   - Enemy
+  - pickup
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: plants
     uniqueID: 2579547005
+    locked: 0
+  - name: itemki
+    uniqueID: 2762223187
     locked: 0
   - name: player
     uniqueID: 4192855511

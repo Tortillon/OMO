@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
 {
     public Rigidbody2D rb;
     public int maxHealth;
-    public int currentHealth;
+    private int currentHealth;
     public Animator animator;
 
     public Image[] hearts;
@@ -20,14 +20,12 @@ public class Health : MonoBehaviour
     {
         animator.SetBool("IsDie", false);
         SceneManager.LoadScene("gameplay");
-        animator = gameObject.GetComponent<Animator>();
     }
 
     void Start()
     {
         currentHealth = maxHealth;
         Debug.Log(currentHealth);
-        Debug.Log(maxHealth);   
     }
 
     void TakeDamage(int damage)
@@ -37,21 +35,23 @@ public class Health : MonoBehaviour
 
     public void Die(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && currentHealth > 1) 
+        if (collision.gameObject.CompareTag("Enemy") && currentHealth > 1)
         {
             TakeDamage(1);
             Debug.Log(currentHealth);
         }
 
-        else
+        else if (collision.gameObject.CompareTag("Enemy"))
         {
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
             animator.SetBool("isDie", true);
             Debug.Log("le");
             Invoke("Gameover", 3);
         }
+        else return;
 
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Die(collision);
