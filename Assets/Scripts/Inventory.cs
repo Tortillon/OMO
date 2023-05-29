@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject[] inventory;
+
     void Start()
     {
         
@@ -17,14 +18,12 @@ public class Inventory : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("pickup"))
         {
-            Debug.Log("kupa");
-            for (int i = 0; i < inventory.Length; i++)
-            {
-                inventory[i].SetActive(true);
-                Debug.Log("dupa");
-            }
+            collision.gameObject.SetActive(false);
+            if (collision.gameObject.name == ("japco")) inventory[0].SetActive(true);
+            else if(collision.gameObject.name == ("heart")) inventory[1].SetActive(true);
+            
         }
     }
 }
