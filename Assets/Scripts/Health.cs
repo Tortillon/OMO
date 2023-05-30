@@ -44,6 +44,7 @@ public class Health : MonoBehaviour
         else if (collision.gameObject.CompareTag("Enemy"))
         {
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            rb.freezeRotation = true;
             animator.SetBool("isDie", true);
             Debug.Log("le");
             Invoke("Gameover", 3);
