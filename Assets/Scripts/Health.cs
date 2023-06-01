@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     public Image[] hearts;
     public Sprite heart;
 
-
+    public GameObject inventoryPotka;
 
     void Gameover()
     {
@@ -25,7 +25,6 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        Debug.Log(currentHealth);
     }
 
     void TakeDamage(int damage)
@@ -35,22 +34,21 @@ public class Health : MonoBehaviour
 
     public void Die(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && currentHealth > 1)
+        if (collision.gameObject.CompareTag("Enemy") && !inventoryPotka.activeSelf)
         {
-            TakeDamage(1);
-            Debug.Log(currentHealth);
-        }
+            if (currentHealth > 1)
+            {
+                TakeDamage(1);
+            }
 
-        else if (collision.gameObject.CompareTag("Enemy"))
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezePosition;
-            rb.freezeRotation = true;
-            animator.SetBool("isDie", true);
-            Debug.Log("le");
-            Invoke("Gameover", 3);
+            else
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                animator.SetBool("isDie", true);
+                Debug.Log("le");
+                Invoke("Gameover", 3);
+            }
         }
-        else return;
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -8,39 +8,46 @@ public class Missions : MonoBehaviour
     public GameObject speechCloud;
     public GameObject pointer;
     public GameObject inventoryItem;
+    public GameObject inventoryPotion;
 
     public GameObject helperTalk;
     public GameObject helperGive;
 
     private Collision2D currentCollision;
+    private bool Given = false;
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {   
-            if (currentCollision!=null && currentCollision.gameObject.CompareTag("Player") && !inventoryItem.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Space) && currentCollision != null && Given == false)
+        {
+            if (!inventoryItem.activeSelf)
             {
                 pointer.SetActive(false);
                 speechCloud.SetActive(true);
             }
+            else
+            {
+                pointer.SetActive(false);
+                helperGive.SetActive(false);
+                inventoryItem.SetActive(false);
+                inventoryPotion.SetActive(true);
+                Given = true;
+            }
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && Given == false)
         {
             if (inventoryItem.activeSelf)
             {
                 helperGive.SetActive(true);
-                Debug.Log("dupa");
             }
             else
             { 
                 helperTalk.SetActive(true);
-                Debug.Log("kupa");
-
             }
             currentCollision = collision;
         }
@@ -49,11 +56,17 @@ public class Missions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (inventoryItem.activeSelf) helperGive.SetActive(false);
-            else
+            if (inventoryItem.activeSelf && Given == false) helperGive.SetActive(false);
+            else if (!inventoryItem.activeSelf && Given == false)
             {
                 helperTalk.SetActive(false);
                 pointer.SetActive(true);
+                speechCloud.SetActive(false);
+            }
+            else if (!inventoryItem.activeSelf && Given == true)
+            {
+                helperTalk.SetActive(false);
+                pointer.SetActive(false);
                 speechCloud.SetActive(false);
             }
             currentCollision = null;

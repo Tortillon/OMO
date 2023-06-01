@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - pickup
   - mission
+  - Family
   layers:
   - Default
   - TransparentFX
@@ -51,11 +52,11 @@ TagManager:
   - name: plants
     uniqueID: 2579547005
     locked: 0
-  - name: itemki
-    uniqueID: 2762223187
-    locked: 0
   - name: player
     uniqueID: 4192855511
+    locked: 0
+  - name: itemki
+    uniqueID: 2762223187
     locked: 0
   - name: UI
     uniqueID: 2734649837
