@@ -30,7 +30,14 @@ public class Health : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        animator.SetBool("Sad", false);
     }
+
+    void Moveon() 
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        animator.SetBool("isSad", false);
+    } 
 
     public void Die(Collision2D collision)
     {
@@ -38,15 +45,17 @@ public class Health : MonoBehaviour
         {
             if (currentHealth > 1)
             {
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                animator.SetBool("isSad", true);
                 TakeDamage(1);
+                Invoke("Moveon", 0.3f);
             }
 
             else
             {
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 animator.SetBool("isDie", true);
-                Debug.Log("le");
-                Invoke("Gameover", 3);
+                Invoke("Gameover", 2f);
             }
         }
     }

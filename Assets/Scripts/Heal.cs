@@ -8,8 +8,8 @@ public class Heal : MonoBehaviour
 {
 
     public GameObject inventoryPotka;
-    public GameObject vicotryPanel;
-    private Collision2D currentCollision;
+    public GameObject victoryPanel;
+    public GameObject continueText;
     public int emesNumber;
     public int emesHealed;
 
@@ -19,22 +19,29 @@ public class Heal : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+    private void Update()
+    {
+        if (emesHealed >= emesNumber)
+        {
+            victoryPanel.SetActive(true);
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            Invoke("Continue", 1);
+        }
+    }
+    void Continue()
+    {
+        continueText.SetActive(true);
+        if (Input.anyKey) victoryPanel.SetActive(false);
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        emesHealed--;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (inventoryPotka.activeSelf && emesHealed < emesNumber)
+        if (inventoryPotka.activeSelf && collision.gameObject.CompareTag("Enemy"))
         {
-            if (collision.gameObject.CompareTag("Enemy"))
-            {
-                collision.gameObject.SetActive(false);
-                emesHealed++;
-                Debug.Log(emesHealed);
-            }
+            collision.gameObject.SetActive(false);
+            emesHealed++;
         }
-        else
-        {
-            vicotryPanel.SetActive(true);
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        }
-        
     }
 }

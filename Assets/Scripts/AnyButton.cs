@@ -14,13 +14,14 @@ using UnityEngine.UI;
 
 public class AnyButton : MonoBehaviour
 {
-    public GameObject title;
+    public TextMeshProUGUI title;
     public TextMeshProUGUI titleText;
     public int t = 1;
 
     private void Start()
     {
         StartCoroutine(FadeTextToFullAlpha(t, titleText));
+        StartCoroutine(FadeTextToFullAlpha(t, title));
     }
 
     private void Update()
@@ -28,6 +29,7 @@ public class AnyButton : MonoBehaviour
         if (UnityEngine.Input.anyKey)
         {
             StartCoroutine(FadeTextToZeroAlpha(t, titleText));
+            StartCoroutine(FadeTextToZeroAlpha(t, title));
             StartCoroutine(LoadLevel());
         }
     }

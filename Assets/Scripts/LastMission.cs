@@ -23,8 +23,8 @@ public class LastMission : MonoBehaviour
         {
             if (inventoryItem[i].activeSelf) Full = true;
         }
+        
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

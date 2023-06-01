@@ -484,6 +484,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: OMO_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691e7149050ddcf4faafc56114fa6d9e
+      internalID: -340415036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OMO_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6711ec5753093444aa13be713935ab62
+      internalID: 709885746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -505,6 +547,8 @@ TextureImporter:
       OMO_sheet_15: 1948048427
       OMO_sheet_16: -1447151705
       OMO_sheet_17: -1827802508
+      OMO_sheet_18: -340415036
+      OMO_sheet_19: 709885746
       OMO_sheet_2: 351584440
       OMO_sheet_3: -122855314
       OMO_sheet_4: -1380606989
