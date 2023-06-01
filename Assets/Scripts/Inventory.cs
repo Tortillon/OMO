@@ -24,7 +24,11 @@ public class Inventory : MonoBehaviour
             if (currentCollision.gameObject.CompareTag("pickup"))
             {
                 if (currentCollision.gameObject.name == ("japco")) inventory[0].SetActive(true);
-                else if (currentCollision.gameObject.name == ("heart")) inventory[1].SetActive(true);
+                else if (currentCollision.gameObject.name == ("grzybek")) inventory[1].SetActive(true);
+                else if (currentCollision.gameObject.name == ("koszyk")) inventory[2].SetActive(true);
+                else if (currentCollision.gameObject.name == ("oko")) inventory[3].SetActive(true);
+                else if (currentCollision.gameObject.name == ("szyszka")) inventory[4].SetActive(true);
+                else if (currentCollision.gameObject.name == ("piorko")) inventory[5].SetActive(true);
                 currentCollision.gameObject.SetActive(false);
             }
             
