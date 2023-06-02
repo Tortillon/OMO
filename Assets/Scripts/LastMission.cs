@@ -13,6 +13,7 @@ public class LastMission : MonoBehaviour
 
     public GameObject helper;
 
+
     private bool Full = false;
 
     private bool Given = false;

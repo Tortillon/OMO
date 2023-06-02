@@ -9,8 +9,7 @@ public class Health : MonoBehaviour
     public Rigidbody2D rb;
     public int maxHealth;
     private int currentHealth;
-    public Animator PlayerAnimator;
-    public Animator HatBAnimator;
+    public Animator[] animators;
 
 
     public Image[] hearts;
@@ -20,8 +19,7 @@ public class Health : MonoBehaviour
 
     void Gameover()
     {
-        PlayerAnimator.SetBool("IsDie", false);
-        HatBAnimator.SetBool("IsDie", false);
+        for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isDie", false);
         SceneManager.LoadScene("gameplay");
     }
 
@@ -33,15 +31,13 @@ public class Health : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        PlayerAnimator.SetBool("Sad", false);
-        HatBAnimator.SetBool("Sad", false);
+        for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isDie", false);
     }
 
     void Moveon() 
     {
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        PlayerAnimator.SetBool("isSad", false);
-        HatBAnimator.SetBool("isSad", false);
+        for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isSad", false);
     } 
 
     public void Die(Collision2D collision)
@@ -51,8 +47,7 @@ public class Health : MonoBehaviour
             if (currentHealth > 1)
             {
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
-                PlayerAnimator.SetBool("isSad", true);
-                HatBAnimator.SetBool("isSad", true);
+                for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isSad", true);
                 TakeDamage(1);
                 Invoke("Moveon", 0.3f);
             }
@@ -60,8 +55,7 @@ public class Health : MonoBehaviour
             else
             {
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
-                PlayerAnimator.SetBool("isDie", true);
-                HatBAnimator.SetBool("isDie", true);
+                for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isDie", true);
                 Invoke("Gameover", 2f);
             }
         }

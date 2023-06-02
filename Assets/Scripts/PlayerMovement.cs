@@ -7,9 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 3f;
     public Rigidbody2D rb;
-    public Animator PlayerAnimator;
-    public Animator HatBAnimator;
-
+    public Animator[] animators;
 
     public bool isDash;
     private float dashSpeed = 15f;
@@ -33,20 +31,16 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        PlayerAnimator.SetFloat("Horizontal", movement.x);
-        PlayerAnimator.SetFloat("Vertical", movement.y);
-        PlayerAnimator.SetFloat("Speed", movement.sqrMagnitude);
+        for (int i = 0; i < animators.Length; i++) animators[i].SetFloat("Horizontal", movement.x);
+        for (int i = 0; i < animators.Length; i++) animators[i].SetFloat("Vertical", movement.y);
+        for (int i = 0; i < animators.Length; i++) animators[i].SetFloat("Speed", movement.sqrMagnitude);
 
-        HatBAnimator.SetFloat("Horizontal", movement.x);
-        HatBAnimator.SetFloat("Vertical", movement.y);
-        HatBAnimator.SetFloat("Speed", movement.sqrMagnitude);
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if (dashCoolTime <= 0 && dashTime <= 0)
             {
-                PlayerAnimator.SetBool("isDash", true);
-                HatBAnimator.SetBool("isDash", true);
+                for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isDash", true);
                 activeSpeed += dashSpeed;
                 dashTime = dashLength;
             }
@@ -58,8 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (dashTime <= 0)
                 {
-                    PlayerAnimator.SetBool("isDash", false);
-                    HatBAnimator.SetBool("isDash", false);
+                    for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isDash", false);
                     activeSpeed = speed;
                     dashCoolTime = dashCooldown;
                 }
@@ -74,6 +67,4 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * activeSpeed * Time.fixedDeltaTime);
     }
-
-    
 }

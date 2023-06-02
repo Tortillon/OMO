@@ -13,6 +13,8 @@ public class Heal : MonoBehaviour
     public int emesNumber;
     public int emesHealed;
 
+    public Animator[] animators;
+
     private Rigidbody2D rb;
 
     void Start()
@@ -24,13 +26,15 @@ public class Heal : MonoBehaviour
     {
         if (emesHealed >= emesNumber)
         {
+            for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isHappy", true);
             victoryPanel.SetActive(true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            Invoke("Continue", 1);
+            Invoke("Continue", 3f);
         }
     }
     void Continue()
     {
+        for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isHappy", false);
         continueText.SetActive(true);
         if (Input.anyKey) victoryPanel.SetActive(false);
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -40,8 +44,16 @@ public class Heal : MonoBehaviour
     {
         if (inventoryPotka.activeSelf && collision.gameObject.CompareTag("Enemy"))
         {
+            for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isHappy", true);
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
             collision.gameObject.SetActive(false);
             emesHealed++;
+            Invoke("StopHappy", 0.35f);
         }
+    }
+    void StopHappy()
+    {
+        for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isHappy", false);
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }
