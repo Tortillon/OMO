@@ -9,7 +9,9 @@ public class Health : MonoBehaviour
     public Rigidbody2D rb;
     public int maxHealth;
     private int currentHealth;
-    public Animator animator;
+    public Animator PlayerAnimator;
+    public Animator HatBAnimator;
+
 
     public Image[] hearts;
     public Sprite heart;
@@ -18,7 +20,8 @@ public class Health : MonoBehaviour
 
     void Gameover()
     {
-        animator.SetBool("IsDie", false);
+        PlayerAnimator.SetBool("IsDie", false);
+        HatBAnimator.SetBool("IsDie", false);
         SceneManager.LoadScene("gameplay");
     }
 
@@ -30,13 +33,15 @@ public class Health : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        animator.SetBool("Sad", false);
+        PlayerAnimator.SetBool("Sad", false);
+        HatBAnimator.SetBool("Sad", false);
     }
 
     void Moveon() 
     {
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        animator.SetBool("isSad", false);
+        PlayerAnimator.SetBool("isSad", false);
+        HatBAnimator.SetBool("isSad", false);
     } 
 
     public void Die(Collision2D collision)
@@ -46,7 +51,8 @@ public class Health : MonoBehaviour
             if (currentHealth > 1)
             {
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
-                animator.SetBool("isSad", true);
+                PlayerAnimator.SetBool("isSad", true);
+                HatBAnimator.SetBool("isSad", true);
                 TakeDamage(1);
                 Invoke("Moveon", 0.3f);
             }
@@ -54,7 +60,8 @@ public class Health : MonoBehaviour
             else
             {
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
-                animator.SetBool("isDie", true);
+                PlayerAnimator.SetBool("isDie", true);
+                HatBAnimator.SetBool("isDie", true);
                 Invoke("Gameover", 2f);
             }
         }

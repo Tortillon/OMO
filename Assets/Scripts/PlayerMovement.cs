@@ -7,7 +7,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 3f;
     public Rigidbody2D rb;
-    public Animator animator;
+    public Animator PlayerAnimator;
+    public Animator HatBAnimator;
+
 
     public bool isDash;
     private float dashSpeed = 15f;
@@ -31,15 +33,20 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        PlayerAnimator.SetFloat("Horizontal", movement.x);
+        PlayerAnimator.SetFloat("Vertical", movement.y);
+        PlayerAnimator.SetFloat("Speed", movement.sqrMagnitude);
+
+        HatBAnimator.SetFloat("Horizontal", movement.x);
+        HatBAnimator.SetFloat("Vertical", movement.y);
+        HatBAnimator.SetFloat("Speed", movement.sqrMagnitude);
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if (dashCoolTime <= 0 && dashTime <= 0)
             {
-                animator.SetBool("isDash", true);
+                PlayerAnimator.SetBool("isDash", true);
+                HatBAnimator.SetBool("isDash", true);
                 activeSpeed += dashSpeed;
                 dashTime = dashLength;
             }
@@ -51,7 +58,8 @@ public class PlayerMovement : MonoBehaviour
 
                 if (dashTime <= 0)
                 {
-                    animator.SetBool("isDash", false);
+                    PlayerAnimator.SetBool("isDash", false);
+                    HatBAnimator.SetBool("isDash", false);
                     activeSpeed = speed;
                     dashCoolTime = dashCooldown;
                 }

@@ -488,7 +488,7 @@ TextureImporter:
       name: hat_o_18
       rect:
         serializedVersion: 2
-        x: 120
+        x: 80
         y: 0
         width: 40
         height: 40
@@ -501,6 +501,27 @@ TextureImporter:
       bones: []
       spriteID: 7e57f33aaffcd2842ac91c992abcceb2
       internalID: 977743361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hat_o_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fdc844c4f6874448e42707eb5e4db0
+      internalID: -1009390384
       vertices: []
       indices: 
       edges: []
@@ -527,6 +548,7 @@ TextureImporter:
       hat_o_16: 1194103886
       hat_o_17: 602772227
       hat_o_18: 977743361
+      hat_o_19: -1009390384
       hat_o_2: 1341259124
       hat_o_3: -657441279
       hat_o_4: 968960877
