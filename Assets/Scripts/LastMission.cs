@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class LastMission : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class LastMission : MonoBehaviour
 
     public GameObject helper;
 
+    public PlayableDirector timeline;
+    public Rigidbody2D rb;
+    /*private PlayState ziemniak = PlayState.Playing;*/
 
     private bool Full = false;
 
@@ -24,7 +28,6 @@ public class LastMission : MonoBehaviour
         {
             if (inventoryItem[i].activeSelf) Full = true;
         }
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,9 +44,7 @@ public class LastMission : MonoBehaviour
                 {
                     inventoryItem[i].SetActive(false);
                 }
-               
-                inventoryPotion.SetActive(true);
-                fullPot.SetActive(true);
+                timeline.Play();
                 Given = true;
             }
         }

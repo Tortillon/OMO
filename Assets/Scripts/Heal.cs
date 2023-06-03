@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Playables;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Heal : MonoBehaviour
@@ -12,6 +12,7 @@ public class Heal : MonoBehaviour
     public GameObject continueText;
     public int emesNumber;
     public int emesHealed;
+    public PlayableDirector timeline;
 
     public Animator[] animators;
 
@@ -47,7 +48,7 @@ public class Heal : MonoBehaviour
             for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isHappy", true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             collision.gameObject.SetActive(false);
-            emesHealed++;
+            if (timeline.state == PlayState.Paused) emesHealed++;
             Invoke("StopHappy", 0.35f);
         }
     }
