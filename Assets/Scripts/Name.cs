@@ -16,6 +16,9 @@ public class Name : MonoBehaviour
     public TextMeshProUGUI Hello;
     public TMP_InputField Input;
     public static string PlayerName;
+    public List<Sprite> hats = new List<Sprite>();
+    public SpriteRenderer spriteRenderer;
+    public static int ChosenHat;
 
     void Start()
     {
@@ -28,7 +31,12 @@ public class Name : MonoBehaviour
 
     public void OnButtonClick(TMP_InputField Input)
     {
-         StartCoroutine(LoadLevel());
+        for (int i = 0; i < 3; i++)
+        {
+            if (spriteRenderer.sprite == hats[i]) ChosenHat = i;
+        }
+        
+        StartCoroutine(LoadLevel());
         PlayerName = Input.text;
     }
 

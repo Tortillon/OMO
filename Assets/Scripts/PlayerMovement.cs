@@ -20,11 +20,14 @@ public class PlayerMovement : MonoBehaviour
 
     private float activeSpeed;
 
+    public GameObject[] Hats;
+
     Vector2 movement;
 
     void Start()
     {
         activeSpeed = speed;
+        Hats[Name.ChosenHat].SetActive(true);
     }
     void Update()
     {
