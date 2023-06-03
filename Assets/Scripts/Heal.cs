@@ -10,6 +10,10 @@ public class Heal : MonoBehaviour
     public GameObject inventoryPotka;
     public GameObject victoryPanel;
     public GameObject continueText;
+
+    public GameObject[] Omos;
+    public GameObject[] Emes;
+
     public int emesNumber;
     public int emesHealed;
     public PlayableDirector timeline;
@@ -47,7 +51,16 @@ public class Heal : MonoBehaviour
         {
             for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isHappy", true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            collision.gameObject.SetActive(false);
+            for (int i = 0; i < Emes.Length; i++)
+            {
+                if (Emes[i] == collision.gameObject)
+                {
+                    Debug.Log(Omos[i]);
+                    collision.gameObject.SetActive(false);
+                    Omos[i].SetActive(true);
+                }
+            }
+            
             if (timeline.state == PlayState.Paused) emesHealed++;
             Invoke("StopHappy", 0.35f);
         }
