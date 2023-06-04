@@ -14,6 +14,7 @@ public class Missions : MonoBehaviour
     public GameObject helperGive;
 
     public Animator animator;
+    public AudioSource yaySound;
 
     private Collision2D currentCollision;
     private bool Given = false;
@@ -30,6 +31,7 @@ public class Missions : MonoBehaviour
             }
             else
             {
+                yaySound.Play();
                 pointer.SetActive(false);
                 helperGive.SetActive(false);
                 inventoryItem.SetActive(false);

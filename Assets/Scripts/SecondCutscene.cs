@@ -10,18 +10,23 @@ public class SecondCutscene : MonoBehaviour
     public Rigidbody2D rb;
     private bool played = false;
     public GameObject[] Omos;
+    public GameObject helperDash;
 
-
+    public GameObject music1;
+    public GameObject music2;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         
-            if (collision.CompareTag("Player") && played == false)
+        if (collision.CompareTag("Player") && played == false)
         {
+            helperDash.SetActive(false);
+            music1.SetActive(false);
+            music2.SetActive(true);
             timeline.Play();
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             played = true;
-            Invoke("Begone", 5);
+            Invoke("Begone", 13);
         }
     }
     void Begone()

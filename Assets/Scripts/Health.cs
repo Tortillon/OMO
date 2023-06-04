@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     private int currentHealth;
     public Animator[] animators;
 
+    public AudioSource ouchSound;
+    public AudioSource uhohSound;
 
     public Image[] hearts;
     public Sprite heart;
@@ -46,6 +48,7 @@ public class Health : MonoBehaviour
         {
             if (currentHealth > 1)
             {
+                ouchSound.Play();
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isSad", true);
                 TakeDamage(1);
@@ -54,6 +57,7 @@ public class Health : MonoBehaviour
 
             else
             {
+                uhohSound.Play();
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isDie", true);
                 Invoke("Gameover", 2f);

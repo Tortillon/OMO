@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour
 {
     public GameObject[] inventory;
     public GameObject helperPickup;
+    public AudioSource pickupSound;
+
     private Collision2D currentCollision;
 
     void Start()
@@ -23,6 +25,7 @@ public class Inventory : MonoBehaviour
         {
             if (currentCollision.gameObject.CompareTag("pickup"))
             {
+                pickupSound.Play();
                 if (currentCollision.gameObject.name == ("japco")) inventory[0].SetActive(true);
                 else if (currentCollision.gameObject.name == ("grzybek")) inventory[1].SetActive(true);
                 else if (currentCollision.gameObject.name == ("koszyk")) inventory[2].SetActive(true);

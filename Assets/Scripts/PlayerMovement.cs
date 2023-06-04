@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator[] animators;
 
+    public AudioSource dashSound;
+
     private bool isDash;
     private float dashSpeed = 10f;
     
@@ -46,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
             Dashtext.SetActive(false);
             if (dashCoolTime <= 0 && dashTime <= 0)
             {
+                dashSound.Play();
                 for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isDash", true);
                 activeSpeed = dashSpeed;
                 dashTime = dashLength;

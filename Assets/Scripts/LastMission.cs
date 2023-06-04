@@ -7,7 +7,6 @@ using UnityEngine.Playables;
 
 public class LastMission : MonoBehaviour
 {
-    public TextMeshProUGUI Counter;
     public GameObject emptyPot;
     public GameObject fullPot;
 
@@ -18,7 +17,8 @@ public class LastMission : MonoBehaviour
 
     public PlayableDirector timeline;
     public Rigidbody2D rb;
-    /*private PlayState ziemniak = PlayState.Playing;*/
+    public GameObject music1;
+    public GameObject music2;
 
     private bool Full = false;
 
@@ -42,13 +42,15 @@ public class LastMission : MonoBehaviour
             }
             else
             {
+                
                 for (int i = 0; i < inventoryItem.Length; i++)
                 {
                     inventoryItem[i].SetActive(false);
                 }
                 timeline.Play();
                 Given = true;
-                Counter.text = "Emes left to heal" + Heal.emesHealed;
+                music2.SetActive(false);
+                music1.SetActive(true);
             }
         }
     }
