@@ -21,7 +21,7 @@ public class SecondCutscene : MonoBehaviour
             timeline.Play();
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             played = true;
-            Invoke("Begone", 13);
+            Invoke("Begone", 5);
         }
     }
     void Begone()

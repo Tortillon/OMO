@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 
 public class Pause : MonoBehaviour
 {
-    private bool isPaused;
 
     public GameObject pause;
     public GameObject panel;
@@ -15,13 +14,11 @@ public class Pause : MonoBehaviour
     public void Resume()
     {
         panel.SetActive(false);
-        isPaused = false;
         Time.timeScale = 1f;
     }
     public void Click()
     {
         panel.SetActive(true);
-        isPaused = true;
         Time.timeScale = 0f;
     }
     public void MainMenu()

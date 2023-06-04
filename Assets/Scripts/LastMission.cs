@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 
 public class LastMission : MonoBehaviour
 {
+    public TextMeshProUGUI Counter;
     public GameObject emptyPot;
     public GameObject fullPot;
 
@@ -46,6 +48,7 @@ public class LastMission : MonoBehaviour
                 }
                 timeline.Play();
                 Given = true;
+                Counter.text = "Emes left to heal" + Heal.emesHealed;
             }
         }
     }

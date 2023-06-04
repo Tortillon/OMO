@@ -13,6 +13,8 @@ public class Missions : MonoBehaviour
     public GameObject helperTalk;
     public GameObject helperGive;
 
+    public Animator animator;
+
     private Collision2D currentCollision;
     private bool Given = false;
 
@@ -32,6 +34,7 @@ public class Missions : MonoBehaviour
                 helperGive.SetActive(false);
                 inventoryItem.SetActive(false);
                 inventoryPotion.SetActive(true);
+                animator.SetBool("isGiven", true);
                 Given = true;
             }
         }

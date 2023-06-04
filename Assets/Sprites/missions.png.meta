@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 89fb8387b46bb5346b0c1d53f5560345
+guid: f44665d4689ea2f40b12a268acd4d397
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -115,14 +115,14 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 058a4aea5eae6a84d87847dead401319
-      internalID: 969857686
+      spriteID: 6f70bebb98e417f48b19ed2962a3f455
+      internalID: -1365406799
       vertices: []
       indices: 
       edges: []
@@ -136,14 +136,14 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e9baca2c3ebd724199b90a8efaee202
-      internalID: -1446239295
+      spriteID: dd0f5c6332de7684c9414dfced5f341b
+      internalID: -1218389976
       vertices: []
       indices: 
       edges: []
@@ -157,14 +157,14 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe92c58fba250024aa90d10b3d642ce5
-      internalID: -513493495
+      spriteID: 74eee2f7cf71edb4aaa6d4fa3a0061a3
+      internalID: 1149709182
       vertices: []
       indices: 
       edges: []
@@ -178,14 +178,14 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39af50699077f46458e262dda18be383
-      internalID: -402335075
+      spriteID: 70f13a1f3b75afa47a25c1c12cf16122
+      internalID: -203722655
       vertices: []
       indices: 
       edges: []
@@ -199,20 +199,20 @@ TextureImporter:
         width: 80
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2896eb6a236a6e4fb33e378ea48f19c
-      internalID: -1469207224
+      spriteID: b7568b7c23ca9d048a80b4e89ab3094a
+      internalID: -426451676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: missions_9
+      name: missions_6
       rect:
         serializedVersion: 2
         x: 0
@@ -220,20 +220,20 @@ TextureImporter:
         width: 80
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c32bd1e24cd38bd45849774a2907081e
-      internalID: 886163675
+      spriteID: 0ccb69bbde4158f489e0a9b150e2b221
+      internalID: 144074648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: missions_11
+      name: missions_8
       rect:
         serializedVersion: 2
         x: 80
@@ -241,20 +241,20 @@ TextureImporter:
         width: 80
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f268237b6acc1842a3830b030b50d2c
-      internalID: -879708839
+      spriteID: 432c944c27ef35d498e63f5b0903c7a9
+      internalID: -691616901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: missions_13
+      name: missions_10
       rect:
         serializedVersion: 2
         x: 160
@@ -262,14 +262,14 @@ TextureImporter:
         width: 80
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01de131229d713249bfa38c0c415545d
-      internalID: 1624090699
+      spriteID: 948b0f64590163e40a25706687ff8209
+      internalID: 920409848
       vertices: []
       indices: 
       edges: []
@@ -278,19 +278,19 @@ TextureImporter:
       name: missions_15
       rect:
         serializedVersion: 2
-        x: 240
-        y: 80
+        x: 0
+        y: 0
         width: 40
-        height: 40
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab8ef72c3a9eef745b2da6e459dd7fa2
-      internalID: -1836222947
+      spriteID: 6dd4b81ec87820e48ac8066190b5377e
+      internalID: 1571438739
       vertices: []
       indices: 
       edges: []
@@ -299,229 +299,19 @@ TextureImporter:
       name: missions_16
       rect:
         serializedVersion: 2
-        x: 280
-        y: 80
-        width: 80
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a290810d0d445c4696a25a7655a138e
-      internalID: -1500036803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 40
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1202fe3d835e19f479304986e29dac4a
-      internalID: -857990304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_19
-      rect:
-        serializedVersion: 2
         x: 40
         y: 0
         width: 40
         height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7621f58ba86a26c4f8a514e75fb7eb60
-      internalID: -1971982529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_20
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 493d47c81b110cf42b5b625653e9ee0b
-      internalID: 17882898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_21
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74dee2b6c68faa740a1d18fa21207c69
-      internalID: 1871144637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_22
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fe2660c34d8dc740aec0e006e8024f4
-      internalID: -1783060082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_23
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 269b22c484450cb4a94a2c1869dbff9b
-      internalID: -1244427578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_25
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fabf9afae3a962458cafd2272aa09c5
-      internalID: 1568163504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_29
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43bb8a6631f2b10428236ff893a0223a
-      internalID: 552479756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_30
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb1cb17464d636749b04ce8d91512e43
-      internalID: 1945659953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: missions_31
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2557a290dd0e8ad439781c1abe7bcda2
-      internalID: -1269849005
+      spriteID: 11d6780f42545114eb13f2f5809f6680
+      internalID: 410376407
       vertices: []
       indices: 
       edges: []
@@ -537,42 +327,39 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      missions_0: 969857686
-      missions_1: -1446239295
-      missions_10: -1828020635
-      missions_11: -879708839
-      missions_12: 1957135481
-      missions_13: 1624090699
-      missions_14: -1870097759
-      missions_15: -1836222947
-      missions_16: -1500036803
-      missions_17: -980550389
-      missions_18: -857990304
-      missions_19: -1971982529
-      missions_2: -513493495
-      missions_20: 17882898
-      missions_21: 1871144637
-      missions_22: -1783060082
-      missions_23: -1244427578
-      missions_24: -1371623684
-      missions_25: 1568163504
-      missions_26: 1954286280
-      missions_27: -236992217
-      missions_28: -781018580
-      missions_29: 552479756
-      missions_3: -402335075
-      missions_30: 1945659953
-      missions_31: -1269849005
-      missions_32: 2051091059
-      missions_33: 566143037
-      missions_34: 167155345
-      missions_35: 103510801
-      missions_4: -1469207224
-      missions_5: 797063213
-      missions_6: 949962508
-      missions_7: -1219168483
-      missions_8: 1281355409
-      missions_9: 886163675
+      missions_0: -1365406799
+      missions_1: -1218389976
+      missions_10: 920409848
+      missions_11: -1207563428
+      missions_12: -1829908412
+      missions_13: -2120357763
+      missions_14: 1492232210
+      missions_15: 1571438739
+      missions_16: 410376407
+      missions_17: -1413969126
+      missions_18: -281920431
+      missions_19: 1393453335
+      missions_2: 1149709182
+      missions_20: 2076320115
+      missions_21: 719411085
+      missions_22: 1082002702
+      missions_23: -1651643889
+      missions_24: 405963716
+      missions_25: -1326911034
+      missions_26: 1129783534
+      missions_27: 1763787609
+      missions_28: -1801549884
+      missions_29: -738018891
+      missions_3: -203722655
+      missions_30: -703152658
+      missions_31: -355891358
+      missions_32: 1627642425
+      missions_4: -426451676
+      missions_5: 1693547932
+      missions_6: 144074648
+      missions_7: -944672293
+      missions_8: -691616901
+      missions_9: -634893744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

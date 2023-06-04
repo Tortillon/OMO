@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using TMPro;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Heal : MonoBehaviour
 {
+    public TextMeshProUGUI Counter;
 
     public GameObject inventoryPotka;
     public GameObject victoryPanel;
@@ -15,7 +17,7 @@ public class Heal : MonoBehaviour
     public GameObject[] Emes;
 
     public int emesNumber;
-    public int emesHealed;
+    public static int emesHealed;
     public PlayableDirector timeline;
 
     public Animator[] animators;

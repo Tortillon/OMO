@@ -9,10 +9,10 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator[] animators;
 
-    public bool isDash;
-    private float dashSpeed = 15f;
+    private bool isDash;
+    private float dashSpeed = 10f;
     
-    private float dashLength = .2f;
+    private float dashLength = .4f;
     private float dashCooldown = .4f;
 
     private float dashTime;
@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private float activeSpeed;
 
     public GameObject[] Hats;
+    public GameObject Dashtext;
 
     Vector2 movement;
 
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         activeSpeed = speed;
         Hats[Name.ChosenHat].SetActive(true);
+        Invoke("Showdash", 2);
     }
     void Update()
     {
@@ -41,10 +43,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            Dashtext.SetActive(false);
             if (dashCoolTime <= 0 && dashTime <= 0)
             {
                 for (int i = 0; i < animators.Length; i++) animators[i].SetBool("isDash", true);
-                activeSpeed += dashSpeed;
+                activeSpeed = dashSpeed;
                 dashTime = dashLength;
             }
         }
@@ -70,4 +73,10 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * activeSpeed * Time.fixedDeltaTime);
     }
+
+    void Showdash()
+    {
+        Dashtext.SetActive(true);
+    }
+
 }
