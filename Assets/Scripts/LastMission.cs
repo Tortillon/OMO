@@ -26,10 +26,7 @@ public class LastMission : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < inventoryItem.Length; i++)
-        {
-            if (inventoryItem[i].activeSelf) Full = true;
-        }
+         if (inventoryItem[0].activeSelf && inventoryItem[1].activeSelf && inventoryItem[2].activeSelf) Full = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -42,7 +39,6 @@ public class LastMission : MonoBehaviour
             }
             else
             {
-                
                 for (int i = 0; i < inventoryItem.Length; i++)
                 {
                     inventoryItem[i].SetActive(false);
