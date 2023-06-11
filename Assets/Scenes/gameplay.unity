@@ -66648,7 +66648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1678241079
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70468,7 +70468,7 @@ PrefabInstance:
       objectReference: {fileID: 4103251369372918255}
     - target: {fileID: 9028368619714799254, guid: b9bd9f62cedd87242868ef67e8f83f9d, type: 3}
       propertyPath: emesNumber
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9028368619714799254, guid: b9bd9f62cedd87242868ef67e8f83f9d, type: 3}
       propertyPath: CounterText

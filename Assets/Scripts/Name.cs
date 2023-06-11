@@ -35,15 +35,13 @@ public class Name : MonoBehaviour
         {
             if (spriteRenderer.sprite == hats[i]) ChosenHat = i;
         }
-        
-        StartCoroutine(LoadLevel());
+
+        SceneManager.LoadScene(2);
         PlayerName = Input.text;
     }
-
-    private IEnumerator LoadLevel()
+    public void Quit()
     {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Application.Quit();
     }
-
+  
 }
